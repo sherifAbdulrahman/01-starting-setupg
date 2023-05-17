@@ -15,10 +15,11 @@ function ExpenseSection(props) {
 
   return (
     <div>
+      
+      <Card className="expenses">
       <div>
         <ExpensesFilter selected={chosenYear} onSetYear={setYearHandler} />
       </div>
-      <Card className="expenses">
         {filteredExpenses.map((singleItem)=>
         <ExpenseItem
           key={singleItem.id}
