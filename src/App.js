@@ -13,7 +13,7 @@ function App() {
   ])
   function addExpenseHandler(expense){
     addedExpense={...expense,id:Math.random().toString()}
-    setExpenses([{...addedExpense},...expenses])  
+    setExpenses((prevExpenses)=>[addedExpense,...prevExpenses])  
     console.log(expenses);
   }
 
